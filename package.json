@@ -1,0 +1,60 @@
+{
+  "name": "react-electron",
+  "description": "React Electron App",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaironalves/electron-react.git"
+  },
+  "homepage": "https://github.com/jaironalves/electron-react#readme",
+  "author": "Jairon Alves Lima",
+  "license": "ISC",
+  "main": "public/electron.js",
+  "scripts": {
+    "prebuild": "webpack --config src/config/webpack.config.prod.babel.js --progress",
+    "start": "webpack-dev-server --config src/config/webpack.config.dev.babel.js",
+    "electron": "electron .",
+    "electron-start": "concurrently --kill-others \"npm start\" \"npm run electron\"",
+    "lint": "eslint --ext .jsx --ext .js src"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^2.0.2",
+    "concurrently": "^4.1.0",
+    "css-loader": "^2.1.1",
+    "electron": "^5.0.1",
+    "electron-builder": "^20.40.2",
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-react": "^7.13.0",
+    "file-loader": "^3.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "react-hot-loader": "^4.8.7",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.3",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.32.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "electron-is-dev": "^1.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
